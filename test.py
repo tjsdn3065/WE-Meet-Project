@@ -66,7 +66,7 @@ class Tether_Control():
                 T_s_t_const=t
             else:
                 break
-        self.goal_angle=atan(((T_s_t_const[1][0]-self.P[1][0])/(T_s_t_const[0][0]-self.P[0][0]))-self.P_direction)-
+        self.goal_angle=atan(((T_s_t_const[1][0]-self.P[1][0])/(T_s_t_const[0][0]-self.P[0][0]))-self.P_direction)
 
 
 
