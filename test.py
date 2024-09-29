@@ -68,9 +68,9 @@ class Tether_Control():
                 break
         self.goal_angle=atan(((T_s_t_const[1][0]-self.P[1][0])/(T_s_t_const[0][0]-self.P[0][0]))-self.P_direction)
 
-
-
-
+    def update_V_r_and_W_r(self):                                   # 목표 각도에 비례한 평행 이동 속도, 각속도
+        self.V_r= -self.k_p*(self.l_m-self.l_d)*(1-self.k_a*abs(self.goal_angle))
+        self.W_r=-self.k_b*self.goal_angle
 
 def main():
     tether_control=Tether_Control()
